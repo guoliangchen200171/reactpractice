@@ -31,3 +31,4 @@ dist-ssr/
 /.vite/deps
 .vite/deps/_metadata.json
 /.vite
+.vite/deps/_metadata.json
