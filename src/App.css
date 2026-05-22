@@ -55,3 +55,17 @@
 .demo input:focus {
   outline: 2px solid var(--accent-border);
 }
+
+.effect-result {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--code-bg);
+  font-size: 14px;
+}
+
+.effect-result strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-h);
+}
