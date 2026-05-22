@@ -1,20 +1,23 @@
+import { useState } from 'react'
 import GetPosts from './components/GetPosts'
 import PostForm from './components/PostForm'
 import './App.css'
 
 function App() {
+  const [refreshKey, setRefreshKey] = useState(0)
+
   return (
     <main className="app">
       <header className="app-header">
         <h1>Axios 练习</h1>
         <p>
-          使用免费练习接口 <code>jsonplaceholder.typicode.com</code> 模拟后端。
-          真实项目里把 <code>baseURL</code> 改成你自己的后端地址即可。
+          不连真实后端。请求写法与正式项目相同，数据由{' '}
+          <code>src/api/setupMock.js</code> 在本地假装返回。
         </p>
       </header>
 
-      <GetPosts />
-      <PostForm />
+      <GetPosts key={refreshKey} />
+      <PostForm onSuccess={() => setRefreshKey((k) => k + 1)} />
     </main>
   )
 }

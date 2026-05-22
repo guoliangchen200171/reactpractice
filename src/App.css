@@ -49,6 +49,27 @@
   color: #dc2626;
 }
 
+.status.success {
+  margin-top: 12px;
+  color: #16a34a;
+}
+
+.btn-ghost {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-border);
+}
+
 .post-list {
   list-style: none;
   margin: 0;
@@ -59,14 +80,22 @@
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
   font-size: 14px;
 }
 
 .post-list li strong {
+  display: block;
   color: var(--text-h);
   font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.post-list li p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
 }
 
 .post-list li span {

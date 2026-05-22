@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import api from '../api/client'
 
-function PostForm() {
+function PostForm({ onSuccess }) {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [loading, setLoading] = useState(false)
@@ -16,16 +16,12 @@ function PostForm() {
       setError('')
       setResult(null)
 
-      // POST：把表单内容发给后端
-      const { data } = await api.post('/posts', {
-        title,
-        body,
-        userId: 1,
-      })
+      const { data } = await api.post('/posts', { title, body })
 
       setResult(data)
       setTitle('')
       setBody('')
+      onSuccess?.()
     } catch (err) {
       setError(err.message || '提交失败')
     } finally {
@@ -37,7 +33,8 @@ function PostForm() {
     <section className="panel">
       <h2>POST — 提交数据</h2>
       <p>
-        <code>api.post('/posts', {'{ title, body }'})</code> 点击提交把内容发给后端。
+        <code>await api.post('/posts', {'{ title, body }'})</code>{' '}
+        把表单 JSON 发给「后端」，mock 会假装保存并返回结果。
       </p>
 
       <form className="post-form" onSubmit={handleSubmit}>
@@ -61,14 +58,17 @@ function PostForm() {
           />
         </label>
         <button type="submit" disabled={loading}>
-          {loading ? '提交中…' : '提交到后端'}
+          {loading ? '提交中…' : '发送 POST 请求'}
         </button>
       </form>
 
       {error && <p className="status error">{error}</p>}
 
       {result && (
-        <pre className="result-box">{JSON.stringify(result, null, 2)}</pre>
+        <>
+          <p className="status success">mock 后端返回：</p>
+          <pre className="result-box">{JSON.stringify(result, null, 2)}</pre>
+        </>
       )}
     </section>
   )
