@@ -1,31 +1,13 @@
-.app-nav {
-  display: flex;
-  gap: 8px;
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--border);
+.page {
+  padding: 48px 24px;
+  text-align: center;
 }
 
-.app-nav a {
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 15px;
-  transition: background 0.2s, color 0.2s;
+.page h1 {
+  margin-bottom: 24px;
 }
 
-.app-nav a:hover {
-  background: var(--code-bg);
-  color: var(--text-h);
-}
-
-.app-nav a.active {
-  background: var(--accent-bg);
-  color: var(--text-h);
-  font-weight: 500;
-}
-
-.route-demo button {
+.page button {
   font-family: var(--mono);
   font-size: 14px;
   padding: 8px 18px;
@@ -34,123 +16,8 @@
   color: var(--text-h);
   background: var(--accent-bg);
   cursor: pointer;
-  transition: border-color 0.2s;
 }
 
-.route-demo button:hover {
+.page button:hover {
   border-color: var(--accent-border);
-}
-
-.learn-page {
-  padding: 32px 24px 48px;
-  text-align: left;
-}
-
-.learn-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.learn-header p {
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-.learn-section {
-  padding: 24px 0;
-  border-top: 1px solid var(--border);
-}
-
-.learn-section h2 {
-  margin-bottom: 8px;
-}
-
-.hint {
-  font-size: 14px;
-  margin-bottom: 16px;
-  color: var(--text);
-}
-
-.learn-card {
-  padding: 16px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  background: var(--code-bg);
-}
-
-.learn-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.learn-actions button,
-.learn-section button {
-  font-family: var(--mono);
-  font-size: 14px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  border: 2px solid transparent;
-  color: var(--text-h);
-  background: var(--accent-bg);
-  cursor: pointer;
-  transition: border-color 0.2s;
-}
-
-.learn-actions button:hover {
-  border-color: var(--accent-border);
-}
-
-.user-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
-}
-
-.user-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--social-bg);
-}
-
-.user-card h3 {
-  margin: 0 0 4px;
-  font-size: 18px;
-}
-
-.user-card p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.user-avatar {
-  font-size: 32px;
-  line-height: 1;
-}
-
-.todo-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.todo-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.todo-list label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.todo-list .done {
-  text-decoration: line-through;
-  opacity: 0.6;
 }
