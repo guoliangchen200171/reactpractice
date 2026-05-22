@@ -1,31 +1,41 @@
 {
-  "hash": "cc8d4aba",
+  "hash": "323e3b1a",
   "configHash": "6b6b3c67",
-  "lockfileHash": "166290a6",
-  "browserHash": "354a97cc",
+  "lockfileHash": "1642f6a4",
+  "browserHash": "c555364a",
   "optimized": {
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "df0c159c",
+      "fileHash": "32f7d255",
       "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "8ec4ebc0",
+      "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "e61994e1",
+      "fileHash": "28650c45",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "e8887b83",
+      "fileHash": "9f3cdfe9",
       "needsInterop": true
     }
   },
   "chunks": {
-    "react-DGPCLjpP": {
-      "file": "react-DGPCLjpP.js",
+    "react-BejDdLFV": {
+      "file": "react-BejDdLFV.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-Ds__Jv24": {
+      "file": "react-dom-Ds__Jv24.js",
       "isDynamicEntry": false
     }
   }
