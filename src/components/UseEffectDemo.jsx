@@ -1,31 +1,36 @@
 import { useState, useEffect } from 'react'
 
-// useEffect：在渲染之后执行副作用（改标题、请求接口、定时器等）
 function UseEffectDemo() {
   const [name, setName] = useState('')
-  // 页面上显示 effect 的结果，避免只改标签页标题看不出来
-  const [titleFromEffect, setTitleFromEffect] = useState('')
+  const [message, setMessage] = useState('请在下面输入名字')
 
+  // name 变化后，React 会执行这个函数
   useEffect(() => {
-    const nextTitle = name ? `你好，${name}` : 'React Hooks 练习'
-    document.title = nextTitle
-    setTitleFromEffect(nextTitle)
-  }, [name])
+    if (name) {
+      setMessage(`你好，${name}！`)
+    } else {
+      setMessage('请在下面输入名字')
+    }
+  }, [name]) // 只关心 name，name 不变就不重复执行
 
   return (
     <section className="demo">
       <h2>② useEffect</h2>
-      <p>输入名字后，下面会显示 useEffect 执行后的标题（同时会改浏览器标签页）。</p>
+      <p>
+        输入框改的是 <code>name</code>，下面这行字由 <code>useEffect</code>{' '}
+        根据 name 自动更新。
+      </p>
+
+      <p className="effect-result">
+        <strong>{message}</strong>
+      </p>
+
       <input
         type="text"
-        placeholder="输入你的名字"
+        placeholder="输入名字"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <p className="effect-result">
-        useEffect 设置的标题：
-        <strong>{titleFromEffect || '（等待首次执行…）'}</strong>
-      </p>
     </section>
   )
 }

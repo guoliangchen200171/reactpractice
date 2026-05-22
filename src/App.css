@@ -24,6 +24,7 @@
 .demo p {
   margin-bottom: 16px;
   color: var(--text);
+  line-height: 1.55;
 }
 
 .demo button {
@@ -57,15 +58,12 @@
 }
 
 .effect-result {
-  margin-top: 16px;
   padding: 12px;
   border-radius: 8px;
   background: var(--code-bg);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .effect-result strong {
-  display: block;
-  margin-top: 6px;
   color: var(--text-h);
 }
