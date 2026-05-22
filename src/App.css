@@ -1,33 +1,114 @@
 .app {
-  padding: 40px 24px;
+  padding: 32px 24px 48px;
   text-align: left;
 }
 
-.app > h1 {
+.app-header {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
-.demo {
-  padding: 24px;
-  margin-bottom: 20px;
+.app-header h1 {
+  margin-bottom: 8px;
+}
+
+.app-header p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.panel {
+  padding: 20px;
+  margin-bottom: 16px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--social-bg);
 }
 
-.demo h2 {
-  margin: 0 0 12px;
-  font-size: 20px;
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
 }
 
-.demo p {
+.panel > p {
   margin-bottom: 16px;
+  font-size: 14px;
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
-.demo button {
+.status {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.status.error {
+  color: #dc2626;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.post-list li strong {
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+.post-list li span {
+  flex-shrink: 0;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
+}
+
+.post-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.post-form input,
+.post-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  resize: vertical;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  outline: 2px solid var(--accent-border);
+}
+
+.post-form button {
+  align-self: flex-start;
   font-family: var(--mono);
   font-size: 14px;
   padding: 8px 16px;
@@ -38,32 +119,23 @@
   cursor: pointer;
 }
 
-.demo button:hover {
+.post-form button:hover:not(:disabled) {
   border-color: var(--accent-border);
 }
 
-.demo input {
-  width: 100%;
-  max-width: 280px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  color: var(--text-h);
-  font: inherit;
+.post-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-.demo input:focus {
-  outline: 2px solid var(--accent-border);
-}
-
-.effect-result {
+.result-box {
+  margin-top: 16px;
   padding: 12px;
   border-radius: 8px;
   background: var(--code-bg);
-  font-size: 15px;
-}
-
-.effect-result strong {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-x: auto;
   color: var(--text-h);
 }
