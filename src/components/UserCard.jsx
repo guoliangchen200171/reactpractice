@@ -6,9 +6,11 @@ function UserCard({ user }) {
     <article className="user-card">
       <span className="user-avatar" aria-hidden="true">
         {avatar}
+          <p>测试一下</p>
+          {avatar}
       </span>
-      <div>
-        <h3>{name}</h3>
+        <div>
+            <h3>{name}</h3>
         <p>{role}</p>
       </div>
     </article>

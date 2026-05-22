@@ -7,6 +7,7 @@ import './App.css'
 const users = [
   { name: '小明', role: '前端初学者', avatar: '🧑‍💻' },
   { name: '小红', role: 'React 爱好者', avatar: '🎨' },
+    { name: '111', role: 'Re213213', avatar: 'dafadf' },
 ]
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <h2>① Greeting — props</h2>
         <p className="hint">文件：<code>src/components/Greeting.jsx</code></p>
         <Greeting name="学习者" />
-        <Greeting name="React" emoji="⚛️" />
+        <Greeting name="React" emoji="jidoajfioa" />
       </section>
 
       <section className="learn-section">
